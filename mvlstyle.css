@@ -1,0 +1,455 @@
+/* ========== ALAPSTÍLUSOK ========== */
+body {
+    background-color: black;
+    background-image: url(images/backgorund_blur.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    text-align: justify;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= SZEKCIÓK ======= */
+.opBackground {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 4px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+/* ======= FEJLÉC ======= */
+#pglogoBig {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+/* ======= LEÍRÁS BLOKK ======= */
+.description {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.2em;
+    margin: 2em auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* ======= GOMBOK ======= */
+ul.buttons {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 0;
+    margin: 2em 0;
+}
+
+ul.buttons li img {
+    width: 80px;
+    height: 80px;
+    filter: invert(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+ul.buttons li img:hover {
+    transform: scale(1.2);
+    filter: invert(80%) sepia(30%);
+}
+
+ul.buttons li {
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.btns,
+.btnsWide,
+.btnsLast {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.btns:hover,
+.btnsWide:hover,
+.btnsLast:hover {
+    transform: scale(1.05);
+}
+
+#pglogoBig {
+    transition: transform 0.5s;
+}
+
+#pglogoBig:hover {
+    transform: scale(1.1);
+}
+
+/* ======= JÁTÉK RÉSZ ======= */
+#mvllogo {
+    width: 70%;
+    max-width: 300px;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.borito {
+    width: 60%;
+    max-width: 250px;
+    display: block;
+    margin: 1em auto;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 1.5em auto;
+    border: none;
+}
+
+/* ======= REVIEWS ======= */
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.2em;
+    border-radius: 10px;
+    width: 100%;
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.review-item img.reviewIcon {
+    width: 80px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 1em;
+    flex-shrink: 0;
+}
+
+.review-item p {
+    flex: 1;
+    margin: 0;
+    line-height: 1.4em;
+    text-align: left;
+}
+
+/* Mobilon egymás alá kerül */
+@media (max-width: 600px) {
+    .review-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-item img.reviewIcon {
+        margin: 0 0 0.8em 0;
+    }
+}
+
+/* ======= SCREENSHOTOK ======= */
+.screens {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 1.5em auto;
+    border-radius: 8px;
+}
+
+/* ======= MODERN FOOTER ======= */
+footer {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding-bottom: 2em;
+    color: #ccc;
+    font-size: 0.95rem;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1em;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#footerP {
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: black 2px 2px 4px;
+    margin-bottom: 2em;
+}
+
+#pglogo {
+    height: 35px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#contactD {
+    text-align: center;
+}
+
+#contactD h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+    text-shadow: black 2px 2px 4px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffcc00;
+    transform: translateX(5px);
+}
+
+/* ======= RESZPONZÍV FOOTER ======= */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+
+    #footerP {
+        font-size: 0.9rem;
+    }
+}
+
+#pglogo {
+    height: 40px;
+    vertical-align: text-bottom;
+    horiz-align: center;
+}
+
+#contactD {
+    max-width: 900px;
+    margin: 0 auto;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+#contsTable {
+    width: 100%;
+}
+
+#contsTable td {
+    vertical-align: top;
+    padding: 0.5em;
+}
+
+#contsTable a {
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+}
+
+/* ======= PRIVACY ======= */
+.privacy {
+    background-color: rgba(17, 17, 17, 0.7);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.priv-label {
+    font-weight: bold;
+}
+
+/* ======= FEJ & CÍMEK ======= */
+h1, h2, h3, h4 {
+    text-shadow: black 3px 3px 4px;
+    text-align: center;
+}
+
+a {
+    font-style: normal;
+    color: rgb(255, 204, 0);
+}
+
+/* ======= RESZPONZÍV TÖRÉSPONTOK ======= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .description, .reviewL, .reviewR {
+        width: 90%;
+    }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .description, .reviewL, .reviewR {
+        width: 95%;
+        padding: 1em;
+    }
+
+    ul.buttons {
+        gap: 0.5em;
+    }
+
+    .btns, .btnsWide, .btnsLast {
+        max-width: 80px;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 9;
+    }
+
+    #contactD {
+        font-size: 0.8rem;
+    }
+
+    #contsTable {
+        display: block;
+    }
+
+    #contsTable td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Kis telefon */
+@media (max-width: 480px) {
+    #pglogoBig {
+        max-width: 250px;
+    }
+
+    .borito, #mvllogo {
+        width: 80%;
+    }
+
+    .screens {
+        width: 95%;
+    }
+
+    .btns, .btnsWide, .btnsLast {
+        max-width: 70px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h3, h4 {
+        font-size: 1rem;
+    }
+}
+
+
+/* ======= BORÍTÓ KÉP KÖZÉPRE ======= */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section a {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+}
+
+/* ======= BORÍTÓ HOVER EFFEKT ======= */
+.borito {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.borito:hover {
+    transform: rotate(-6deg) scale(1.15);
+}
+
+/* ======= GAMES GRID ======= */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    justify-items: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* A section kinézete marad középre igazított */
+.games-container section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 350px;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.games-container section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobil barát módosítás — 1 oszlop, ha nem fér el kettő */
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+}
